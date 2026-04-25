@@ -1,6 +1,6 @@
 # 🎬 Buscador de Películas — Proyecto de práctica con React + TypeScript + TMDB API
 
-> **Para programadores junior:** Este proyecto está diseñado para que aprendas a consumir una API real, manejar estado en React y tipar correctamente con TypeScript. Lee este README de principio a fin antes de tocar el código.
+> Este proyecto se hizo de practica sin embargo hago este readme te guiara y la app está diseñado para que aprendas a consumir una API real, manejar estado en React y tipar correctamente con TypeScript. Lee este README de principio a fin antes de tocar el código.
 
 ---
 
