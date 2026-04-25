@@ -1,0 +1,114 @@
+.movie-card {
+  cursor: pointer;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--surface);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.movie-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+/* Wrapper del póster: posición relativa para los elementos superpuestos */
+.card-poster-wrapper {
+  position: relative;
+  aspect-ratio: 2 / 3;
+  background: var(--surface-2);
+}
+
+.card-poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition);
+}
+
+.movie-card:hover .card-poster {
+  transform: scale(1.04);
+}
+
+/* Gradiente oscuro en la parte inferior del póster */
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Botón de favorito (corazón) */
+.favorite-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  color: var(--muted);
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition), color var(--transition);
+  opacity: 0;
+}
+
+.movie-card:hover .favorite-btn,
+.favorite-btn.is-favorite {
+  opacity: 1;
+}
+
+.favorite-btn:hover,
+.favorite-btn.is-favorite {
+  background: rgba(229, 9, 20, 0.85);
+  color: white;
+}
+
+/* Badge de puntuación */
+.card-score {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0.5rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius);
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.score-green {
+  color: #4caf50;
+}
+
+.score-yellow {
+  color: #ff9800;
+}
+
+.score-red {
+  color: #e53935;
+}
+
+/* Información textual debajo del póster */
+.card-info {
+  padding: 0.625rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.card-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-year {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
