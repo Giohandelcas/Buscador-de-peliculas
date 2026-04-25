@@ -1,0 +1,32 @@
+.error-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 3rem;
+  text-align: center;
+  color: var(--muted);
+}
+
+.error-icon {
+  font-size: 2.5rem;
+}
+
+.error-message p {
+  font-size: 1rem;
+  max-width: 400px;
+}
+
+.retry-button {
+  padding: 0.5rem 1.5rem;
+  background: var(--accent);
+  color: white;
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: background var(--transition);
+}
+
+.retry-button:hover {
+  background: var(--accent-hover);
+}
